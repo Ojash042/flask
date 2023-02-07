@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if error %}
+        <p>E-mail already in use</p>
+    {% endif %}
+    <p style="color: red;"></p>
+    <form method="post" action="{{url_for('signup')}}" onsubmit="return validate()">
+        <input id = "email" name = "email" type = "email" placeholder="E-mail" class="textbox" required>
+        <input id = "password" name = "password" type = "password" placeholder="Password" class="textbox" required> 
+        <input id = "confirmPassword" name = "confirmPassword" type = "password" placeholder="Confirm Password" class="textbox" required>
+        <i src = ""id = "eye">eye</i>
+        <input id = "contact" name="contact" type="text" placeholder="Contact No." class="textbox" required>
+        <input id = "fname" name = "fname" type = "text" placeholder="First Name" class="textbox" required>
+        <input id = "lname" name = "lname" type="text" placeholder = "Last Name" class="textbox" required>
+        <input type="submit" name="submit" value="Submit" class="btn">
+
+    </form>
+    <p id = "32"></p>
+    <script src = "{{url_for('static',filename = 'validation.js')}}"></script>
+</body>
+</html>
