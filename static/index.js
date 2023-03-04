@@ -1,4 +1,4 @@
-    fetch('http://localhost:5000/current_movie_data').then((response) =>{
+fetch('http://localhost:5000/movie_data').then((response) =>{
         return response.json();
     }).then((myJson) => {
         current_films = myJson["current"]

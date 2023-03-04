@@ -18,6 +18,5 @@ for i in database.keys():
     database[i] = temp
 
 database = jsonify(database)
-print(database)
 
 app.run()

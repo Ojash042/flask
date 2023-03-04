@@ -12,7 +12,6 @@ mycursor = mydb.cursor(buffered=True)
 def show_tables():
     mycursor.execute("SHOW TABLES")
     for i in mycursor:
-        print(i) 
 
 def check_email_valid(email):
     query = "SELECT customer_id,email FROM Customers WHERE email=%s"
@@ -57,7 +56,6 @@ def show_upcoming_films():
     mycursor.execute(query,)
     result = mycursor.fetchall()
     return result
-#print(show_current_films())
 
 def get_film_data(id):
     query  = "SELECT * FROM Films WHERE id = %s"
@@ -66,7 +64,7 @@ def get_film_data(id):
     return result
 
 def add_seats():
-    query = "INSERT INTO Seats()"
+    query = "INSERT INTO Seats(%s,%)"
     for i in range(6):
         row = chr(ord('a')+i)
         for j in range(12):
