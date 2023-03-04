@@ -42,7 +42,6 @@ def add_customer_data(values):
     mycursor.execute(query,values)
     mydb.commit()
 #print(account("admin@admin.com", "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"))
-#add_customer_data([2334,"Ojash","Devkota","ojash25@gmail.com","Meronaam1","9874215547"])
 
 def show_current_films():
     query = "SELECT * FROM Films WHERE STATE = 0"
