@@ -1,21 +1,19 @@
 {% extends "base.html" %}
 {% block title %}Welcome {% endblock %}
 {% block head %}
+{{super()}}
+<link rel="stylesheet" href = "{{url_for('static',filename= 'css/index.css')}}">
 <script src="{{url_for('static', filename= 'index.js')}}"></script>
 {% endblock %}
 {% block content%}
-    <div id = "container">
-        <label for="current-films-container">Now Showing</label>
-        <div id = "current-films-container"></div>
-        <label for = "upcoming-films-container">Upcoming</label>
-        <div id = "upcoming-films-container"></div>
+    <div class = "container">
+        <div id = "current-films-container">
+            <label>Now Showing</label>
+        </div>
+        <div id = "upcoming-films-container"> 
+            <label>Upcoming</label>
+        </div>
     </div>
-    <style>
-        *{
-            padding: 5px;
-            margin: 5px;
-        }
-    </style>
 {% endblock %}
     
 </body>

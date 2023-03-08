@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static',filename = 'css/base.css')}}">
     <title>{% block title %}{% endblock %}</title>
+    {%block css%}{% endblock %}
     {% endblock %}
 </head>
 <body>
     <nav>
-        <span>
-            <div class="logo">
-                <a href=""><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIWwBTXLevJltBPVyUYLqnTv1oAb08mL62kHkRS6nwOQ&s"></a>
-            
+        <div class="logo">
+                <a href="/"><img src="{{url_for('static',filename='Logo.png')}}" height="100px" width="100px"></a>
         </div>
         <div class = "login-container">
             {% if session['username'] %}
@@ -23,7 +23,6 @@
             <a href="/signup">Sign Up</a>
             {% endif %}
         </div>
-    </span>
     </nav>
     <div id= "content" >
         {% block content %}

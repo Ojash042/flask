@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}{% endblock %}
+{% block head %}
+{{super()}}
+<link rel="stylesheet" href="{{url_for('static',filename = 'css/film_page.css')}}">
+{% endblock %}
+{% block content %}
     <div id="film-container">
-
+        <div id = "label-container"></div>
     </div>
-</body>
 <script src = "{{url_for('static', filename = 'film_page.js')}}"></script>
-</html>
+{% endblock %}
